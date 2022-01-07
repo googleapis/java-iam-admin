@@ -81,6 +81,12 @@
         <artifactId>proto-google-iam-admin-v1</artifactId>
         <version>1.0.0</version><!-- {x-version-update:proto-google-iam-admin-v1:current} -->
       </dependency>
+      <dependency>
+        <!-- override google-cloud-shared-dependencies -->
+        <groupId>com.google.protobuf</groupId>
+        <artifactId>protobuf-java</artifactId>
+        <version>3.18.2</version>
+      </dependency>
 
       <dependency>
         <groupId>com.google.cloud</groupId>
