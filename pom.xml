@@ -81,6 +81,13 @@
         <artifactId>proto-google-iam-admin-v1</artifactId>
         <version>1.0.0</version><!-- {x-version-update:proto-google-iam-admin-v1:current} -->
       </dependency>
+      <dependency>
+        <groupId>com.google.protobuf</groupId>
+        <artifactId>protobuf-bom</artifactId>
+        <version>3.19.2</version>
+        <type>pom</type>
+        <scope>import</scope>
+      </dependency>
 
       <dependency>
         <groupId>com.google.cloud</groupId>
