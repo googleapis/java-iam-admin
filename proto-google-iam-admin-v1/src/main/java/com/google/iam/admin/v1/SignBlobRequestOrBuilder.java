@@ -40,6 +40,7 @@ public interface SignBlobRequestOrBuilder
    * string name = 1 [deprecated = true, (.google.api.field_behavior) = REQUIRED, (.google.api.resource_reference) = { ... }
    * </code>
    *
+   * @deprecated
    * @return The name.
    */
   @java.lang.Deprecated
@@ -61,6 +62,7 @@ public interface SignBlobRequestOrBuilder
    * string name = 1 [deprecated = true, (.google.api.field_behavior) = REQUIRED, (.google.api.resource_reference) = { ... }
    * </code>
    *
+   * @deprecated
    * @return The bytes for name.
    */
   @java.lang.Deprecated
@@ -78,6 +80,7 @@ public interface SignBlobRequestOrBuilder
    * <code>bytes bytes_to_sign = 2 [deprecated = true, (.google.api.field_behavior) = REQUIRED];
    * </code>
    *
+   * @deprecated
    * @return The bytesToSign.
    */
   @java.lang.Deprecated

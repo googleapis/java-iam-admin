@@ -193,6 +193,7 @@ public interface ServiceAccountOrBuilder
    *
    * <code>bytes etag = 7 [deprecated = true];</code>
    *
+   * @deprecated
    * @return The etag.
    */
   @java.lang.Deprecated

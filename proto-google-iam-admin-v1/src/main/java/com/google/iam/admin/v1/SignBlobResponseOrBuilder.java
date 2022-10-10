@@ -34,6 +34,7 @@ public interface SignBlobResponseOrBuilder
    *
    * <code>string key_id = 1 [deprecated = true];</code>
    *
+   * @deprecated
    * @return The keyId.
    */
   @java.lang.Deprecated
@@ -49,6 +50,7 @@ public interface SignBlobResponseOrBuilder
    *
    * <code>string key_id = 1 [deprecated = true];</code>
    *
+   * @deprecated
    * @return The bytes for keyId.
    */
   @java.lang.Deprecated
@@ -65,6 +67,7 @@ public interface SignBlobResponseOrBuilder
    *
    * <code>bytes signature = 2 [deprecated = true];</code>
    *
+   * @deprecated
    * @return The signature.
    */
   @java.lang.Deprecated

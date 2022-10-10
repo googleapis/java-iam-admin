@@ -34,6 +34,7 @@ public interface SignJwtResponseOrBuilder
    *
    * <code>string key_id = 1 [deprecated = true];</code>
    *
+   * @deprecated
    * @return The keyId.
    */
   @java.lang.Deprecated
@@ -49,6 +50,7 @@ public interface SignJwtResponseOrBuilder
    *
    * <code>string key_id = 1 [deprecated = true];</code>
    *
+   * @deprecated
    * @return The bytes for keyId.
    */
   @java.lang.Deprecated
@@ -65,6 +67,7 @@ public interface SignJwtResponseOrBuilder
    *
    * <code>string signed_jwt = 2 [deprecated = true];</code>
    *
+   * @deprecated
    * @return The signedJwt.
    */
   @java.lang.Deprecated
@@ -80,6 +83,7 @@ public interface SignJwtResponseOrBuilder
    *
    * <code>string signed_jwt = 2 [deprecated = true];</code>
    *
+   * @deprecated
    * @return The bytes for signedJwt.
    */
   @java.lang.Deprecated
