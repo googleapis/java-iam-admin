@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.8](https://github.com/googleapis/java-iam-admin/compare/v1.1.7...v1.1.8) (2022-10-11)
+
+
+### Dependencies
+
+* Regenerating with new Protobuf ([#202](https://github.com/googleapis/java-iam-admin/issues/202)) ([27ec279](https://github.com/googleapis/java-iam-admin/commit/27ec279cdd9effcc26bf92ccc52f139d460536cd))
+
 ### [1.1.7](https://github.com/googleapis/java-iam-admin/compare/v1.1.6...v1.1.7) (2022-04-15)
 
 
