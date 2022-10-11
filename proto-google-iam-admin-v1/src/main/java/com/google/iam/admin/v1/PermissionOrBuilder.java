@@ -103,6 +103,7 @@ public interface PermissionOrBuilder
   /**
    * <code>bool only_in_predefined_roles = 4 [deprecated = true];</code>
    *
+   * @deprecated
    * @return The onlyInPredefinedRoles.
    */
   @java.lang.Deprecated

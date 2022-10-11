@@ -40,6 +40,7 @@ public interface SignJwtRequestOrBuilder
    * string name = 1 [deprecated = true, (.google.api.field_behavior) = REQUIRED, (.google.api.resource_reference) = { ... }
    * </code>
    *
+   * @deprecated
    * @return The name.
    */
   @java.lang.Deprecated
@@ -61,6 +62,7 @@ public interface SignJwtRequestOrBuilder
    * string name = 1 [deprecated = true, (.google.api.field_behavior) = REQUIRED, (.google.api.resource_reference) = { ... }
    * </code>
    *
+   * @deprecated
    * @return The bytes for name.
    */
   @java.lang.Deprecated
@@ -84,6 +86,7 @@ public interface SignJwtRequestOrBuilder
    *
    * <code>string payload = 2 [deprecated = true, (.google.api.field_behavior) = REQUIRED];</code>
    *
+   * @deprecated
    * @return The payload.
    */
   @java.lang.Deprecated
@@ -106,6 +109,7 @@ public interface SignJwtRequestOrBuilder
    *
    * <code>string payload = 2 [deprecated = true, (.google.api.field_behavior) = REQUIRED];</code>
    *
+   * @deprecated
    * @return The bytes for payload.
    */
   @java.lang.Deprecated

@@ -55,57 +55,6 @@ public final class SignJwtResponse extends com.google.protobuf.GeneratedMessageV
     return this.unknownFields;
   }
 
-  private SignJwtResponse(
-      com.google.protobuf.CodedInputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-      throws com.google.protobuf.InvalidProtocolBufferException {
-    this();
-    if (extensionRegistry == null) {
-      throw new java.lang.NullPointerException();
-    }
-    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-        com.google.protobuf.UnknownFieldSet.newBuilder();
-    try {
-      boolean done = false;
-      while (!done) {
-        int tag = input.readTag();
-        switch (tag) {
-          case 0:
-            done = true;
-            break;
-          case 10:
-            {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              keyId_ = s;
-              break;
-            }
-          case 18:
-            {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              signedJwt_ = s;
-              break;
-            }
-          default:
-            {
-              if (!parseUnknownField(input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-        }
-      }
-    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-      throw e.setUnfinishedMessage(this);
-    } catch (java.io.IOException e) {
-      throw new com.google.protobuf.InvalidProtocolBufferException(e).setUnfinishedMessage(this);
-    } finally {
-      this.unknownFields = unknownFields.build();
-      makeExtensionsImmutable();
-    }
-  }
-
   public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
     return com.google.iam.admin.v1.IamProto
         .internal_static_google_iam_admin_v1_SignJwtResponse_descriptor;
@@ -134,6 +83,7 @@ public final class SignJwtResponse extends com.google.protobuf.GeneratedMessageV
    *
    * <code>string key_id = 1 [deprecated = true];</code>
    *
+   * @deprecated
    * @return The keyId.
    */
   @java.lang.Override
@@ -160,6 +110,7 @@ public final class SignJwtResponse extends com.google.protobuf.GeneratedMessageV
    *
    * <code>string key_id = 1 [deprecated = true];</code>
    *
+   * @deprecated
    * @return The bytes for keyId.
    */
   @java.lang.Override
@@ -189,6 +140,7 @@ public final class SignJwtResponse extends com.google.protobuf.GeneratedMessageV
    *
    * <code>string signed_jwt = 2 [deprecated = true];</code>
    *
+   * @deprecated
    * @return The signedJwt.
    */
   @java.lang.Override
@@ -215,6 +167,7 @@ public final class SignJwtResponse extends com.google.protobuf.GeneratedMessageV
    *
    * <code>string signed_jwt = 2 [deprecated = true];</code>
    *
+   * @deprecated
    * @return The bytes for signedJwt.
    */
   @java.lang.Override
@@ -251,7 +204,7 @@ public final class SignJwtResponse extends com.google.protobuf.GeneratedMessageV
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(signedJwt_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 2, signedJwt_);
     }
-    unknownFields.writeTo(output);
+    getUnknownFields().writeTo(output);
   }
 
   @java.lang.Override
@@ -266,7 +219,7 @@ public final class SignJwtResponse extends com.google.protobuf.GeneratedMessageV
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(signedJwt_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, signedJwt_);
     }
-    size += unknownFields.getSerializedSize();
+    size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -283,7 +236,7 @@ public final class SignJwtResponse extends com.google.protobuf.GeneratedMessageV
 
     if (!getKeyId().equals(other.getKeyId())) return false;
     if (!getSignedJwt().equals(other.getSignedJwt())) return false;
-    if (!unknownFields.equals(other.unknownFields)) return false;
+    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
 
@@ -298,7 +251,7 @@ public final class SignJwtResponse extends com.google.protobuf.GeneratedMessageV
     hash = (53 * hash) + getKeyId().hashCode();
     hash = (37 * hash) + SIGNED_JWT_FIELD_NUMBER;
     hash = (53 * hash) + getSignedJwt().hashCode();
-    hash = (29 * hash) + unknownFields.hashCode();
+    hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -429,17 +382,10 @@ public final class SignJwtResponse extends com.google.protobuf.GeneratedMessageV
     }
 
     // Construct using com.google.iam.admin.v1.SignJwtResponse.newBuilder()
-    private Builder() {
-      maybeForceBuilderInitialization();
-    }
+    private Builder() {}
 
     private Builder(com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders) {}
     }
 
     @java.lang.Override
@@ -535,7 +481,7 @@ public final class SignJwtResponse extends com.google.protobuf.GeneratedMessageV
         signedJwt_ = other.signedJwt_;
         onChanged();
       }
-      this.mergeUnknownFields(other.unknownFields);
+      this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
     }
@@ -550,17 +496,43 @@ public final class SignJwtResponse extends com.google.protobuf.GeneratedMessageV
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      com.google.iam.admin.v1.SignJwtResponse parsedMessage = null;
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       try {
-        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10:
+              {
+                keyId_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 10
+            case 18:
+              {
+                signedJwt_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 18
+            default:
+              {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+          } // switch (tag)
+        } // while (!done)
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (com.google.iam.admin.v1.SignJwtResponse) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        if (parsedMessage != null) {
-          mergeFrom(parsedMessage);
-        }
-      }
+        onChanged();
+      } // finally
       return this;
     }
 
@@ -576,6 +548,7 @@ public final class SignJwtResponse extends com.google.protobuf.GeneratedMessageV
      *
      * <code>string key_id = 1 [deprecated = true];</code>
      *
+     * @deprecated
      * @return The keyId.
      */
     @java.lang.Deprecated
@@ -601,6 +574,7 @@ public final class SignJwtResponse extends com.google.protobuf.GeneratedMessageV
      *
      * <code>string key_id = 1 [deprecated = true];</code>
      *
+     * @deprecated
      * @return The bytes for keyId.
      */
     @java.lang.Deprecated
@@ -626,6 +600,7 @@ public final class SignJwtResponse extends com.google.protobuf.GeneratedMessageV
      *
      * <code>string key_id = 1 [deprecated = true];</code>
      *
+     * @deprecated
      * @param value The keyId to set.
      * @return This builder for chaining.
      */
@@ -650,6 +625,7 @@ public final class SignJwtResponse extends com.google.protobuf.GeneratedMessageV
      *
      * <code>string key_id = 1 [deprecated = true];</code>
      *
+     * @deprecated
      * @return This builder for chaining.
      */
     @java.lang.Deprecated
@@ -670,6 +646,7 @@ public final class SignJwtResponse extends com.google.protobuf.GeneratedMessageV
      *
      * <code>string key_id = 1 [deprecated = true];</code>
      *
+     * @deprecated
      * @param value The bytes for keyId to set.
      * @return This builder for chaining.
      */
@@ -697,6 +674,7 @@ public final class SignJwtResponse extends com.google.protobuf.GeneratedMessageV
      *
      * <code>string signed_jwt = 2 [deprecated = true];</code>
      *
+     * @deprecated
      * @return The signedJwt.
      */
     @java.lang.Deprecated
@@ -722,6 +700,7 @@ public final class SignJwtResponse extends com.google.protobuf.GeneratedMessageV
      *
      * <code>string signed_jwt = 2 [deprecated = true];</code>
      *
+     * @deprecated
      * @return The bytes for signedJwt.
      */
     @java.lang.Deprecated
@@ -747,6 +726,7 @@ public final class SignJwtResponse extends com.google.protobuf.GeneratedMessageV
      *
      * <code>string signed_jwt = 2 [deprecated = true];</code>
      *
+     * @deprecated
      * @param value The signedJwt to set.
      * @return This builder for chaining.
      */
@@ -771,6 +751,7 @@ public final class SignJwtResponse extends com.google.protobuf.GeneratedMessageV
      *
      * <code>string signed_jwt = 2 [deprecated = true];</code>
      *
+     * @deprecated
      * @return This builder for chaining.
      */
     @java.lang.Deprecated
@@ -791,6 +772,7 @@ public final class SignJwtResponse extends com.google.protobuf.GeneratedMessageV
      *
      * <code>string signed_jwt = 2 [deprecated = true];</code>
      *
+     * @deprecated
      * @param value The bytes for signedJwt to set.
      * @return This builder for chaining.
      */
@@ -838,7 +820,18 @@ public final class SignJwtResponse extends com.google.protobuf.GeneratedMessageV
             com.google.protobuf.CodedInputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
-          return new SignJwtResponse(input, extensionRegistry);
+          Builder builder = newBuilder();
+          try {
+            builder.mergeFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            throw e.setUnfinishedMessage(builder.buildPartial());
+          } catch (com.google.protobuf.UninitializedMessageException e) {
+            throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+          } catch (java.io.IOException e) {
+            throw new com.google.protobuf.InvalidProtocolBufferException(e)
+                .setUnfinishedMessage(builder.buildPartial());
+          }
+          return builder.buildPartial();
         }
       };
 
