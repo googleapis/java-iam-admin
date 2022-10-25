@@ -11,7 +11,7 @@
   <parent>
     <groupId>com.google.cloud</groupId>
     <artifactId>google-iam-admin-parent</artifactId>
-    <version>1.3.1-SNAPSHOT</version><!-- {x-version-update:google-iam-admin:current} -->
+    <version>3.0.0</version><!-- {x-version-update:google-iam-admin:current} -->
   </parent>
   <properties>
     <site.installationModule>google-iam-admin</site.installationModule>
